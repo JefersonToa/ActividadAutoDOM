@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white shadow mb-8 fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2 text-blue-700 font-bold text-xl">
+        <i class="bi bi-diagram-3-fill"></i> DOM
+      </a>
+      <ul class="flex gap-6 text-gray-700 font-medium">
+        <li>
+          <a href="/index.html" target="_blank" class="hover:text-blue-600 flex items-center gap-1">
+            <i class="bi bi-arrow-left"></i> Atrás
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container mx-auto mt-24 px-4">
+    <section id="mas-informacion-dom" class="mb-10 bg-blue-50 rounded-lg p-6 shadow">
+      <h1 class="text-2xl font-bold mb-4 text-blue-700 flex items-center gap-2">
+        <br>
+        <h1 class="text-2xl font-semibold mb-4 text-blue-700 text-center"><strong>Estructura Jerárquica del DOM</strong></h1>
+        <p>
+          El DOM (Document Object Model) representa la estructura de una página web como una jerarquía de nodos.
+          Cada elemento HTML es un nodo dentro de esta estructura, permitiendo a los lenguajes de programación como JavaScript acceder y manipular su contenido dinámicamente.
+        </p>
+      <section>
+        <h2 class="text-2xl font-semibold mb-2 text-blue-700">¿Cómo está organizada?</h2>
+        <p>
+          La jerarquía comienza con el nodo raíz llamado <code>document</code>, que contiene al elemento <code>html</code>.
+          Dentro de <code>html</code>, se encuentran dos grandes secciones: <code>head</code> y <code>body</code>.
+          Cada uno puede contener múltiples nodos hijos, formando una estructura en forma de árbol.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2 text-blue-700">Ejemplo de estructura jerárquica</h2>
+        <ul class="list-disc ml-6">
+          <li><strong>document</strong>
+            <ul class="list-disc ml-6">
+              <li><strong>html</strong>
+                <ul class="list-disc ml-6">
+                  <li><strong>head</strong>
+                    <ul class="list-disc ml-6">
+                      <li>meta</li>
+                      <li>title</li>
+                      <li>link</li>
+                    </ul>
+                  </li>
+                  <li><strong>body</strong>
+                    <ul class="list-disc ml-6">
+                      <li>header</li>
+                      <li>nav</li>
+                      <li>main
+                        <ul class="list-disc ml-6">
+                          <li>section</li>
+                          <li>article</li>
+                          <li>aside</li>
+                        </ul>
+                      </li>
+                      <li>footer</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2 text-blue-700">Importancia de la jerarquía</h2>
+        <p>
+          Esta organización jerárquica permite identificar fácilmente la relación entre los elementos de una página,
+          facilitando tareas como el acceso a un nodo específico, la modificación de contenido o la manipulación de eventos.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-white dark:bg-gray-800 rounded-lg shadow mt-8">
+    <div class="max-w-screen-xl mx-auto px-4 py-8 md:flex md:justify-between md:items-center">
+      <div class="mb-4 md:mb-0 flex items-center space-x-4">
+        <i class="bi bi-filetype-py text-blue-600"></i>
+        <span class="text-xl font-semibold text-gray-800 dark:text-white">Python</span>
+      </div>
+      <ul class="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 space-x-6">
+        <li>
+          <a href="https://www.facebook.com/?locale=es_LA" class="hover:underline flex items-center gap-1">
+            <i class="bi bi-facebook"></i> Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="hover:underline flex items-center gap-1">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://web.telegram.org/k/" class="hover:underline flex items-center gap-1">
+            <i class="bi bi-telegram"></i> Telegram
+          </a>
+        </li>
+        <li>
+          <a href="https://web.whatsapp.com/" class="hover:underline flex items-center gap-1">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4 pb-4">
+      © 2025 <strong>DOM</strong>. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
