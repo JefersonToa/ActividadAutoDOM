@@ -14,32 +14,44 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-  <nav class="bg-white shadow mb-8 fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="#" class="flex items-center gap-2 text-blue-700 font-bold text-xl">
-        <i class="bi bi-diagram-3-fill"></i> DOM
-      </a>
-      <ul class="flex gap-6 text-gray-700 font-medium">
-        <li><a href="#definicion" class="hover:text-blue-600 flex items-center gap-1"><i class="bi bi-info-circle"></i>
-            Definición</a></li>
-        <li><a href="#caracteristicas" class="hover:text-blue-600 flex items-center gap-1"><i class="bi bi-stars"></i>
-            Características</a></li>
-        <li><a href="#objetivos" class="hover:text-blue-600 flex items-center gap-1"><i class="bi bi-bullseye"></i>
-            Objetivos</a></li>
-        <li>
-          <a href="https://lenguajejs.com/dom/introduccion/que-es/" target="_blank"
-            class="hover:text-blue-600 flex items-center gap-1">
-            <i class="bi bi-box-arrow-up-right"></i> Más info
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="mb-12"></div>
-  <main class="container mx-auto px-4 py-8">
+  <nav class="bg-white shadow mb-8 fixed top-0 left-0 w-full z-50 glass">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="#" class="flex items-center gap-2 text-blue-700 font-bold text-xl">
+      <i class="bi bi-diagram-3-fill"></i> DOM
+    </a>
+    <!-- Botón hamburguesa para móviles -->
+    <button id="menu-toggle" class="md:hidden text-2xl text-blue-700 focus:outline-none" aria-label="Abrir menú">
+      <i class="bi bi-list"></i>
+    </button>
+    <!-- Menú de navegación -->
+    <ul id="nav-menu" class="flex-col md:flex-row md:flex gap-6 text-gray-700 font-medium absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow md:shadow-none z-40 md:z-auto hidden md:flex">
+      <li>
+        <a href="#definicion" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="bi bi-info-circle"></i> Definición
+        </a>
+      </li>
+      <li>
+        <a href="#caracteristicas" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="bi bi-stars"></i> Características
+        </a>
+      </li>
+      <li>
+        <a href="#objetivos" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="bi bi-bullseye"></i> Objetivos
+        </a>
+      </li>
+      <li>
+        <a href="https://lenguajejs.com/dom/introduccion/que-es/" target="_blank"
+          class="hover:text-blue-600 flex items-center gap-1">
+          <i class="bi bi-box-arrow-up-right"></i> Más info
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="mb-20"></div>
+  <main class="container mx-auto px-4 py-8 flex-1">
     <section id="definicion" class="mb-10">
-      <br>
-
       <div id="animation-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
         <div class="relative h-46 overflow-hidden rounded-lg md:h-96 flex items-center justify-center bg-gray-100">
@@ -88,68 +100,66 @@
         </button>
       </div>
       <br>
-      <section class="mb-10 bg-blue-50 rounded-lg p-6 shadow" id="contenido">
-      <h1 class="text-2xl font-bold mb-6 text-blue-700 text-center">
-    <h1 class="text-5xl font-bold mb-6 flex items-center justify-content-center gap-2 text-blue-700">
-    ¿Qué es el DOM?
-</h1>
-      <br>
-      <p class="text-lg">
-        El <strong>Document Object Model (DOM)</strong> es una interfaz de programación para documentos HTML y XML.
-        Representa la estructura del documento como una jerarquía de nodos y objetos, permitiendo a los lenguajes de
-        programación manipular, modificar y acceder dinámicamente al contenido, estructura y estilo de una página web.
-      </p>
+      <section class="mb-10 glass rounded-lg p-6 shadow" id="contenido">
+        <h1 class="main-title text-5xl font-bold mb-6 flex items-center justify-center gap-2 text-blue-700">
+          ¿Qué es el DOM?
+        </h1>
+        <p class="text-lg">
+          El <strong>Document Object Model (DOM)</strong> es una interfaz de programación para documentos HTML y XML.
+          Representa la estructura del documento como una jerarquía de nodos y objetos, permitiendo a los lenguajes de
+          programación manipular, modificar y acceder dinámicamente al contenido, estructura y estilo de una página web.
+        </p>
+      </section>
     </section>
     <section id="caracteristicas" class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2 text-blue-700">
+      <h2 class="section-title text-2xl font-semibold mb-4 flex items-center gap-2 text-blue-700">
         <i class="bi bi-stars text-yellow-500"></i>
         Características principales
       </h2>
-      <ul class="grid md:grid-cols-3 gap-6 ">
-        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center titulo">
+      <ul class="grid md:grid-cols-3 gap-6">
+        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center">
           <i class="bi bi-diagram-3 text-3xl text-blue-500 mb-2"></i>
           <span class="font-bold mb-2">Estructura Jerárquica</span>
-          <img src="/img/estructura.jpg" alt="estrucrura">
+          <img src="/img/estructura.jpg" alt="estructura">
           <span class="text-center text-blue-700 text-lg">Organiza los elementos en forma de árbol, donde cada nodo representa
             una parte del documento.</span>
-            <div class="flex flex-wrap gap-4">
-        <a href="/pages/estructura.html" target="_blank"
-          class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-          Haz click para mas infromación
-        </a>
-      </div>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="/pages/estructura.html" target="_blank"
+              class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              Haz click para más información
+            </a>
+          </div>
         </li>
-        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center titulo2">
+        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center">
           <i class="bi bi-code-slash text-3xl text-green-500 mb-2"></i>
           <span class="font-bold mb-2">Interactividad</span>
           <img src="/img/interactividad.png" alt="interactividad">
           <span class="text-center text-green-700 text-lg">Permite modificar el contenido y los estilos de los elementos en
             tiempo real mediante JavaScript.</span>
-            <div class="flex flex-wrap gap-4">
-        <a href="/pages/interactividad.html" target="_blank"
-          class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-          Haz click para mas información
-        </a>
-      </div>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="/pages/interactividad.html" target="_blank"
+              class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              Haz click para más información
+            </a>
+          </div>
         </li>
-        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center titulo3">
+        <li class="bg-white rounded-lg shadow p-5 flex flex-col items-center">
           <i class="bi bi-arrow-repeat text-3xl text-purple-500 mb-2"></i>
           <span class="font-bold mb-2">Actualización Dinámica</span>
           <img src="/img/actualizacion.png" alt="actualizacion">
           <span class="text-center text-purple-700 text-lg">Facilita la actualización dinámica de la página sin recargarla
             completamente.</span>
-            <br>
-            <div class="flex flex-wrap gap-4">
-        <a href="/pages/actualizacion.html" target="_blank"
-          class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-          Haz click para mas información
-        </a>
-      </div>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="/pages/actualizacion.html" target="_blank"
+              class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              Haz click para más información
+            </a>
+          </div>
         </li>
       </ul>
     </section>
     <section id="objetivos" class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2 text-blue-700">
+      <h2 class="section-title text-2xl font-semibold mb-4 flex items-center gap-2 text-blue-700">
         <i class="bi bi-bullseye text-blue-500"></i>
         Objetivos y utilidad en el desarrollo web
       </h2>
@@ -180,17 +190,15 @@
         para la accesibilidad, la optimización del rendimiento y la integración con APIs modernas del navegador. Gracias
         al DOM, los frameworks como React, Vue y Angular pueden crear interfaces de usuario reactivas y eficientes.
       </p>
-
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg max-w-2xl mx-auto">
         <br>
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th  class="px-6 py-3">
+              <th class="px-6 py-3">
                 Métodos
               </th>
-              <th  class="px-6 py-3">
+              <th class="px-6 py-3">
                 Descripción
               </th>
             </tr>
@@ -198,7 +206,7 @@
           <tbody>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <p> obtenerElementoPorId(id)</p>
+                <p>obtenerElementoPorId(id)</p>
               </th>
               <td class="px-6 py-4">
                 Selecciona un elemento por su ID.
@@ -206,7 +214,7 @@
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <p> obtenerElementosPorNombreDeClase(clase)</p>
+                <p>obtenerElementosPorNombreDeClase(clase)</p>
               </th>
               <td class="px-6 py-4">
                 Selecciona todos los elementos con una clase determinada.
@@ -214,7 +222,7 @@
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <p> querySelector(selector)</p>
+                <p>querySelector(selector)</p>
               </th>
               <td class="px-6 py-4">
                 Selecciona el primer elemento coincidente.
@@ -260,7 +268,6 @@
                 Adjunta un controlador de eventos a un elemento.
               </td>
             </tr>
-
           </tbody>
         </table>
         <br>
@@ -269,41 +276,40 @@
           <img src="/img/ejemplo.png" alt="ejemplo">
         </div>
       </div>
+    </section>
   </main>
-  <footer class="bg-white dark:bg-gray-800 rounded-lg shadow mt-8 mi-fot">
-        <div class="max-w-screen-xl mx-auto px-4 py-8 md:flex md:justify-between md:items-center">
-
-          <div class="mb-4 md:mb-0 flex items-center space-x-4">
-            <i class="bi bi-filetype-py"></i></i>
-            <span class="text-xl font-semibold text-gray-800 dark:text-white">Python</span>
-          </div>
-          <ul class="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 space-x-6">
-            <li>
-              <a href="https://www.facebook.com/?locale=es_LA" class="hover:underline flex items-center gap-1">
-                <i class="bi bi-facebook"></i> Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" class="hover:underline flex items-center gap-1">
-                <i class="bi bi-instagram"></i> Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://web.telegram.org/k/" class="hover:underline flex items-center gap-1">
-                <i class="bi bi-telegram"></i> Telegram
-              </a>
-            </li>
-            <li>
-              <a href="https://web.whatsapp.com/" class="hover:underline flex items-center gap-1">
-                <i class="bi bi-whatsapp"></i> WhatsApp
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4 pb-4">
-          © 2025 <strong>DOM</strong>. Todos los derechos reservados.
-        </div>
-      </footer>
+  <footer class="footer mt-8">
+    <div class="max-w-screen-xl mx-auto px-4 py-8 md:flex md:justify-between md:items-center">
+      <div class="mb-4 md:mb-0 flex items-center space-x-4">
+        <i class="bi bi-filetype-py"></i>
+        <span class="text-xl font-semibold text-gray-800 dark:text-white">Python</span>
+      </div>
+      <ul class="flex flex-wrap items-center text-sm font-medium space-x-6">
+        <li>
+          <a href="https://www.facebook.com/?locale=es_LA" class="footer-link flex items-center gap-1">
+            <i class="bi bi-facebook"></i> Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="footer-link flex items-center gap-1">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://web.telegram.org/k/" class="footer-link flex items-center gap-1">
+            <i class="bi bi-telegram"></i> Telegram
+          </a>
+        </li>
+        <li>
+          <a href="https://web.whatsapp.com/" class="footer-link flex items-center gap-1">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center text-sm mt-4 pb-4 text-gray-200">
+      © 2025 <strong>DOM</strong>. Todos los derechos reservados.
+    </div>
+  </footer>
 </body>
 </html>

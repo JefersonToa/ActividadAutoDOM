@@ -9,3 +9,49 @@
 .titulo3 {
     color: purple;
 }
+
+.footer-link {
+    color: #f1f5f9;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #ffe066;
+    text-decoration: underline;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid #e0e7ff;
+    box-shadow: 0 4px 24px 0 rgba(37, 99, 235, 0.08);
+}
+
+.main-title {
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #c7d2fe;
+}
+
+.section-title {
+    border-left: 4px solid #2563eb;
+    padding-left: 0.5rem;
+    background: linear-gradient(90deg, #dbeafe 60%, #f0fdfa 100%);
+    border-radius: 0.25rem;
+}
+
+.list-disc li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .titulo, .titulo2, .titulo3 {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 601px) {
+    .titulo, .titulo2, .titulo3 {
+        font-size: 32px;
+    }
+}
